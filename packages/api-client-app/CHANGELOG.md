@@ -1,5 +1,13 @@
 # scalar-api-client
 
+## 0.1.74
+
+### Patch Changes
+
+- 277f95c: style: updates sidenav icon size
+- Updated dependencies [277f95c]
+  - @scalar/api-client@2.1.35
+
 ## 0.1.73
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @scalar/api-client
 
+## 2.1.35
+
+### Patch Changes
+
+- 277f95c: style: removes top border and sets overscroll property
+
 ## 2.1.34
 
 ### Patch Changes

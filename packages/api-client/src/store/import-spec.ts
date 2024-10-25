@@ -32,13 +32,13 @@ export function importSpecFileFactory({
     workspaceUid: string,
     {
       documentUrl,
-      watchForChanges = false,
+      watchMode = false,
       overloadServers,
       preferredSecurityScheme,
     }: {
-      /** To store the documentUrl, used for watchForChanges */
+      /** To store the documentUrl, used for watchMode */
       documentUrl?: string
-      watchForChanges?: boolean
+      watchMode?: boolean
       /**
        * TODO: What do these look like?
        * Ideally we reference some existing UIDs in the store and
@@ -57,7 +57,7 @@ export function importSpecFileFactory({
     const workspaceEntities = await importSpecToWorkspace(spec, {
       documentUrl,
       preferredSecurityScheme,
-      watchForChanges,
+      watchMode,
     })
 
     if (workspaceEntities.error) {
@@ -107,10 +107,10 @@ export function importSpecFileFactory({
     {
       proxy,
       overloadServers,
-      watchForChanges = false,
+      watchMode = false,
       preferredSecurityScheme,
     }: {
-      watchForChanges?: boolean
+      watchMode?: boolean
       overloadServers?: Spec['servers']
       preferredSecurityScheme?: ClientConfiguration['preferredSecurityScheme']
       proxy?: string
@@ -124,7 +124,7 @@ export function importSpecFileFactory({
         await importSpecFile(spec, workspaceUid, {
           documentUrl: url,
           overloadServers,
-          watchForChanges,
+          watchMode,
           preferredSecurityScheme,
         }),
       ]

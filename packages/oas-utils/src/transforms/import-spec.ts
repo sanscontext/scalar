@@ -78,9 +78,9 @@ export async function importSpecToWorkspace(
   spec: string | UnknownObject,
   {
     documentUrl,
-    watchForChanges,
+    watchMode,
     preferredSecurityScheme,
-  }: Pick<CollectionPayload, 'documentUrl' | 'watchForChanges'> &
+  }: Pick<CollectionPayload, 'documentUrl' | 'watchMode'> &
     Pick<Partial<AuthenticationState>, 'preferredSecurityScheme'> = {},
 ): Promise<
   | {
@@ -322,7 +322,7 @@ export async function importSpecToWorkspace(
 
   const collection = collectionSchema.parse({
     ...schema,
-    watchForChanges,
+    watchMode,
     documentUrl,
     auth,
     requests: requests.map((r) => r.uid),

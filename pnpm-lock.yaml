@@ -1550,7 +1550,7 @@ importers:
         specifier: workspace:*
         version: link:../build-tooling
       msw:
-        specifier: ^2.4.11
+        specifier: ^2.4.12
         version: 2.4.13(typescript@5.6.2)
 
   packages/galaxy:
@@ -39431,7 +39431,7 @@ snapshots:
   yargs@17.7.2:
     dependencies:
       cliui: 8.0.1
-      escalade: 3.1.2
+      escalade: 3.2.0
       get-caller-file: 2.0.5
       require-directory: 2.1.1
       string-width: 4.2.3
